@@ -1,0 +1,44 @@
+/*  
+Theme Name: I Love Brownies
+Theme URI: http://www.ilovebrownies.com.br/
+Description: Site I Love Brownies
+Author: I Love Brownies
+Author URI: http://www.ilovebrownies.com.br/
+*/
+
+/*NAVBAR*/
+header {    position: fixed; top: 0; left: 0; width: 100%; z-index: 9;}
+header .navbar-inverse {background-color: rgba(212, 0, 0, 0.8); border: none; padding: 10px 0; margin-bottom: 0;}
+header .navbar {border-radius: 0; }
+header .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {font-family: 'Pacifico', cursive; color: #ffffff; font-size: 40px; }
+header .navbar-inverse .navbar-nav>li>a {color: #ffffff; }
+
+/*BANNER*/
+#home .filter {
+    background-color: rgba(212, 0, 0, 0.21);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#home #banner {
+	position: absolute;
+	width: 100%;
+}
+
+#home #banner .item {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#home .text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	z-index: 2;
+	text-align: center;
+}
