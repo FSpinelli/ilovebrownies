@@ -30,21 +30,46 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h2>Produtos</h2>
-				<ul class="categorias">
-					<li class="active"><a href="#">Todos</a></li>
-					<li><a href="#">Produto 1</a></li>
-					<li><a href="#">Produto 2</a></li>
-					<li><a href="#">Produto 3</a></li>
-				</ul>
-				<div class="row">
-					<img src="https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png" class="produto">
-					<img src="https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png" class="produto">
-					<img src="https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png" class="produto">
-					<img src="https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png" class="produto">
+				<?php include 'galeria.php'; ?>
+			</div>
+		</div>
+	</div>
+	<div style="margin-bottom:150px;"></div>
+</section>
+
+<section id="o-que-dizem">
+	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active" style="height:300px;">
+				      <h3>asdf asdfasdf asdfasdff asdfasdf</h3>
+				    </div>
+
+				    <div class="item" style="height:300px;">
+				      <h3>asdf as1234 asdfasdf</h3>
+				    </div>
+
+				    <div class="item" style="height:300px;">
+				    <h3>asdf as1234 asdfasdf asdf</h3>
+				    </div>
+
+				  </div>
+				</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

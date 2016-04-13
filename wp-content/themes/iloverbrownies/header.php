@@ -7,11 +7,15 @@
 		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/css/layout.css">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="<?php bloginfo('template_directory') ?>/js/jquery.stellar.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
+		<script src="<?php bloginfo('template_directory') ?>/js/jquery.mixitup.min.js"></script>
 		<script src="<?php bloginfo('template_directory') ?>/js/index.js"></script>
 	</head>
 <body>
