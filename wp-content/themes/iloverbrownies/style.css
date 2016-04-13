@@ -6,39 +6,118 @@ Author: I Love Brownies
 Author URI: http://www.ilovebrownies.com.br/
 */
 
-/*NAVBAR*/
-header {    position: fixed; top: 0; left: 0; width: 100%; z-index: 9;}
-header .navbar-inverse {background-color: rgba(212, 0, 0, 0.8); border: none; padding: 10px 0; margin-bottom: 0;}
-header .navbar {border-radius: 0; }
-header .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {font-family: 'Pacifico', cursive; color: #ffffff; font-size: 40px; }
-header .navbar-inverse .navbar-nav>li>a {color: #ffffff; }
-
-/*BANNER*/
-#home .filter {
-    background-color: rgba(212, 0, 0, 0.21);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+/*DEFAULT*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
 }
 
-#home #banner {
-	position: absolute;
+p {
+	font-size: 18px;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2:after {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background: #f9333f;
+    margin-left: -35px;
+    bottom: 0px;
+    left: 50%;
+    background: #ccc;
+}
+
+.img {
 	width: 100%;
 }
 
-#home #banner .item {
+.background {
+	min-height: 300px;
+	width: 100%;
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
+	position: relative;
 }
 
-#home .text {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	color: #fff;
-	z-index: 2;
+.background h3{
 	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	font-size: 40px;
+	color: #fff;
+}
+
+/*NAVBAR*/
+header {    position: fixed; top: 0; left: 0; width: 100%; z-index: 9;}
+header .navbar-inverse {background-color: rgba(212, 0, 0, 0.7); border: none; padding: 10px 0; margin-bottom: 0;}
+header .navbar {border-radius: 0; }
+header .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {font-family: 'Pacifico', cursive; color: #ffffff; font-size: 35px; }
+header .nav>li {font-size: 16px;}
+header .navbar-inverse .navbar-nav>li>a {color: #ffffff; }
+
+/*HOME*/
+#home {background-size: cover; background-position: center; background-repeat: no-repeat; }
+#home .text {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff; z-index: 2; text-align: center; }
+#home .text h1 {font-size: 70px; font-family: 'Pacifico', cursive; }
+#home .text h2 {text-transform: uppercase; }
+#home .filter {background-color: rgba(0,0,0,0.2); position: absolute; z-index: ; left: 0; top: 0; width: 100%; height: 100%;}
+
+/*SOBRE*/
+#sobre {background-color: #ffffff; }
+#sobre .container {padding: 100px 0; text-align: center; }
+
+/*PRODUTOS*/
+#produtos {
+	padding: 100px 0;
+	text-align: center;
+}
+
+#produtos .categorias {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+#produtos .categorias>li {
+	list-style: none;
+	float: left;
+	margin: 0 5px;
+}
+
+#produtos .categorias>li>a {
+	text-decoration: none;
+	color: #555;
+	font-style: italic;
+}
+
+#produtos .categorias>li.active a {
+	color: #d40000;
+}
+
+#produtos .categorias>li>a:after {
+	content: "/";
+	padding-left: 10px;
+	font-weight: 300;
+}
+
+#produtos .produto {
+	width: 24%;
+	border: none;
+	cursor: pointer;
+	flex: left;
+	text-align: left;
 }
