@@ -7,10 +7,16 @@
 		<i></i>
 	</div>
 </section>
+
+
+
 <section id="sobre">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
+
+
+				
 				<h2>Sobre a Gente</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -21,7 +27,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="0.5">
+	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="1.5">
 		<h3>Um texto legal aqui.</h3>
 	</div>
 </section>
@@ -79,14 +85,18 @@
 </section>
 
 <section id="contato">
-	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="0.5">
+	<div class="background" style="background-image: url(<?php bloginfo('template_directory') ?>/img/bg-contato.jpg);" data-stellar-background-ratio="0.2">
 		<div class="container">
-			<form role="form">
-				<div class="row">
-					<div class="col-sm-12">
-						<h2>Contato</h2>
-					</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<h2>Contato</h2>
+					<p>
+						Address: 1234 Some Street, Fancytown, UK  <br>
+						Contact details: Phone: 123 456 7890, Fax: +49 123 456 7891
+					</p>
 				</div>
+			</div>
+			<form role="form">
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="form-group">
@@ -137,4 +147,4 @@
 	</div>
 </section>
 
-<?php //get_footer(); ?>
+<?php get_footer(); ?>

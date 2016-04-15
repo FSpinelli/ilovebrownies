@@ -7,6 +7,10 @@ Author URI: http://www.ilovebrownies.com.br/
 */
 
 /*DEFAULT*/
+* {
+	outline: none !important;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: #555;
@@ -71,6 +75,14 @@ header .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand 
 header .nav>li {font-size: 16px;}
 header .navbar-inverse .navbar-nav>li>a {color: #ffffff; }
 
+header .navbar-inverse .navbar-toggle {border:none;}
+
+header .navbar-inverse .navbar-toggle:focus, header .navbar-inverse .navbar-toggle:hover {
+    background-color: initial;
+}
+
+header .navbar-inverse .navbar-collapse, header .navbar-inverse .navbar-form {border: none;}
+
 /*HOME*/
 #home {background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; margin-top: -15px;}
 #home .text {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: #fff; z-index: 2; text-align: center; }
@@ -100,25 +112,127 @@ header .navbar-inverse .navbar-nav>li>a {color: #ffffff; }
     width: 100%;
 }
 
+#contato .background {
+	padding: 100px 0;
+}
+
 #contato h2 {
 	color: #fff;
+	margin-top: 0;
+}
+
+#contato p {
+	color: #fff;
+	text-align: center;
+}
+
+#contato form {
+	margin-top: 50px;
+}
+
+#contato .form-control {
+	box-shadow: none;
 }
 
 #contato input, #contato select {
-
+	height: 50px;
 }
 
 #contato textarea {
-	
+	resize: none;
 }
 
 #contato .btn {
-	
+	height: 50px;
 }
 
+#contato .btn-danger {
+    background-color: #d40000;
+    border-color: #d40000;
+}
+
+#contato .btn-danger:hover {
+	background-color: #A80404;
+	border-color: #A80404;
+}
+
+footer {
+	background-color: #222;
+	color: #444;
+	min-height: 80px;
+	font-size: 16px;
+}
+
+footer a {
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+footer p {
+	margin-top: 29px;
+	float: left;
+}
+
+footer .social-media {
+	margin-top: 20px;
+	float: right;
+}
+
+footer .icon {
+	font-size: 35px;
+	margin-left: 5px;
+}
 
 @media screen and (min-width: 768px) {
 	.carousel-indicators {
 	    bottom: 70px;
+	}
+}
+
+@media (max-width: 768px) {
+
+
+	header .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+		font-size: 25px;
+	}
+
+
+	#home .text h1 {
+	    font-size: 38px;
+	    line-height: 53px;
+	}
+
+
+	.background h3 {
+		font-size: 25px;
+	}
+
+
+	#filters li {
+	    float: none;
+	    background-color: #ddd;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+	    -o-border-radius: 5px;
+	}
+
+
+
+	footer {
+		text-align: center;
+	}
+	footer p, footer .social-media {
+		float: none;
+	}
+
+	footer p {
+		margin-top: 25px;
+	    margin-bottom: 10px;
+	}
+
+	footer .social-media {
+	    margin-top: 0;
+	    margin-bottom: 10px;
 	}
 }

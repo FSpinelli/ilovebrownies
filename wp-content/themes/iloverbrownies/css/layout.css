@@ -66,8 +66,13 @@ body {
 }
 
 #filters li span.active {
-    background: #d30000;
+    background: #d40000;
     color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 #portfoliolist .portfolio {

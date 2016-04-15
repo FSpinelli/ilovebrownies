@@ -9,6 +9,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/beauty-font.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/css/layout.css">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
