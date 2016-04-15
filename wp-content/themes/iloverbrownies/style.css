@@ -94,13 +94,31 @@ header .navbar-inverse .navbar-nav>li>a {color: #ffffff; }
 }
 
 #o-que-dizem .item h3 {
-	font-size: 30px;
+	font-family: 'Cookie', cursive;
+	font-size: 40px;
 	color: #fff;
+    width: 100%;
+}
+
+#contato h2 {
+	color: #fff;
+}
+
+#contato input, #contato select {
+
+}
+
+#contato textarea {
+	
+}
+
+#contato .btn {
+	
 }
 
 
 @media screen and (min-width: 768px) {
 	.carousel-indicators {
-	    bottom: 60px;
+	    bottom: 70px;
 	}
 }
