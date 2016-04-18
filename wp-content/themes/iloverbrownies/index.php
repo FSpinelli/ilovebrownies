@@ -15,22 +15,24 @@
 </section>
 
 
-
+<?php 
+	$page = get_page_by_title( 'sobre' );
+	$content = apply_filters('the_content', $page->post_content); 
+	$url = wp_get_attachment_url( get_post_thumbnail_id($page->ID) ); 
+?>
 <section id="sobre">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2>Sobre</h2>
-				<?php 
-					$page = get_page_by_title( 'sobre' );
-					$content = apply_filters('the_content', $page->post_content); 
+				<?php  
 					echo $content;  
 				?>
 			</div>
 		</div>
 	</div>
-	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="1.5">
-		<h3>Um texto legal aqui.</h3>
+	<div class="background" style="background-image: url(<?php echo $url; ?>);" data-stellar-background-ratio="0.5">
+		<!-- <h3>Um texto legal aqui.</h3> -->
 	</div>
 </section>
 <section id="produtos">
@@ -38,6 +40,9 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h2>Produtos</h2>
+
+
+			
 				<?php include 'galeria.php'; ?>
 			</div>
 		</div>
