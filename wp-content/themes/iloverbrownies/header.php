@@ -18,7 +18,7 @@
 		<script src="<?php bloginfo('template_directory') ?>/js/jquery.stellar.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
 		<script src="<?php bloginfo('template_directory') ?>/js/jquery.mixitup.min.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvN4eVimKvD5usbJ5LFj6BWqMxu2imFMU"></script>
 		<script src="<?php bloginfo('template_directory') ?>/js/index.js"></script>
 	</head>
 <body>

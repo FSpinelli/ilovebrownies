@@ -1,10 +1,16 @@
 <?php get_header(); ?>
-<section id="home" style="background-image:url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="0.5">
+
+<?php 
+	$page = get_page_by_title( 'home' );
+	$content = apply_filters('the_content', $page->post_content); 
+	$url = wp_get_attachment_url( get_post_thumbnail_id($page->ID) ); 
+?>
+<section id="home" style="background-image:url(<?php echo $url; ?>);" data-stellar-background-ratio="0.5">
 	<div class="filter"></div>
 	<div class="text" data-stellar-background-ratio="3">
-		<h1>Aqui Entra Um Título</h1>
-		<h3>Aqui um Subtitulo</h3>
-		<i></i>
+		<?php 
+			echo $content;  
+		?>
 	</div>
 </section>
 
@@ -14,16 +20,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-
-
-				
-				<h2>Sobre a Gente</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2>Sobre</h2>
+				<?php 
+					$page = get_page_by_title( 'sobre' );
+					$content = apply_filters('the_content', $page->post_content); 
+					echo $content;  
+				?>
 			</div>
 		</div>
 	</div>
@@ -43,7 +45,7 @@
 	<div style="margin-bottom:150px;"></div>
 </section>
 
-<section id="o-que-dizem">
+<section id="depoimentos">
 	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row">
@@ -84,16 +86,19 @@
 	<div id="googleMap" style="width:100%px;height:300px;"></div>
 </section>
 
+
+<?php 
+	$page = get_page_by_title( 'contato' );
+	$content = apply_filters('the_content', $page->post_content); 
+	$url = wp_get_attachment_url( get_post_thumbnail_id($page->ID) ); 
+?>
 <section id="contato">
-	<div class="background" style="background-image: url(<?php bloginfo('template_directory') ?>/img/bg-contato.jpg);" data-stellar-background-ratio="0.2">
+	<div class="background" style="background-image: url(<?php echo $url; ?>);" data-stellar-background-ratio="0.2">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<h2>Contato</h2>
-					<p>
-						Address: 1234 Some Street, Fancytown, UK  <br>
-						Contact details: Phone: 123 456 7890, Fax: +49 123 456 7891
-					</p>
+					<?php echo $content ?>
 				</div>
 			</div>
 			<form role="form">

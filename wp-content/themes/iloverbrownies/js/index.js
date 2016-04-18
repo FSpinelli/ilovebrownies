@@ -48,6 +48,17 @@ $(document).ready(function(){
 });
 
 
+$(function() {
+  $('header a').click(function(event) {
+  	event.preventDefault();
+        $('html, body').animate({
+          scrollTop: $('#'+$(this).text().toLowerCase()).offset().top
+        }, 1000);
+        // return false;
+  });
+});
+
+
 // Maps
 var myCenter=new google.maps.LatLng(51.508742,-0.120850);
 
