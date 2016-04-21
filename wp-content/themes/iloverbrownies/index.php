@@ -42,28 +42,72 @@
 				<h2>Produtos</h2>
 
 
-			
-				<?php include 'galeria.php'; ?>
+
+
+		<ul id="filters" class="clearfix">
+			<?php
+				$cats = '';
+				$li = '';
+				$i = 0;
+
+				foreach (get_categories() as $cat) {
+					if($cat->name != 'Produtos'){
+						$cats .= $cat->name.' ';
+						$li .= '<li><span class="filter" data-filter="'.$cat->name.'">'.$cat->name.'</span></li>';
+
+						$args = array( 'category' => $cat->cat_ID );
+						$myposts = get_posts( $args );
+						foreach ( $myposts as $post ) {
+
+
+							$portfolio[$i] = '<div class="'.$post->post_title.' portfolio '.$cat->name.'" data-cat="'.$cat->name.'">	
+												<div class="portfolio-wrapper">				
+													<img src="'.wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium')[0].'" alt="'.$post->post_title.'" />
+													<div class="label">
+														<div class="label-text">
+															<a class="text-title">'.$post->post_title.'</a>
+															<div class="text-category">'.$post->post_content.'</div>
+														</div>
+														<div class="label-bg"></div>
+													</div>
+												</div>
+											</div>';
+							$i++;
+						}
+						wp_reset_postdata();
+
+					}
+				}
+			?>
+			<li><span class="filter active" data-filter="<?php echo $cats; ?>">Todos</span></li>
+			<?php echo $li; ?>
+		</ul>
+
+		<div id="portfoliolist"><?php
+		asort($portfolio);
+		foreach ($portfolio as $key => $value) {
+			echo $value;
+		}
+		?></div>
+
 			</div>
 		</div>
 	</div>
 	<div style="margin-bottom:150px;"></div>
 </section>
 
-<section id="depoimentos">
+<!-- <section id="depoimentos">
 	<div class="background" style="background-image: url(https://lojamasterchef.files.wordpress.com/2015/10/brownies-chocolate.png);" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
 				  <ol class="carousel-indicators">
 				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				    <li data-target="#myCarousel" data-slide-to="1"></li>
 				    <li data-target="#myCarousel" data-slide-to="2"></li>
 				  </ol>
 
-				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item active" style="height:300px;">
 				      <h3>“ asdf asdfasdf asdfasdff asdfasdf asdf asdfasdf asdfasdff asdfasdf asdf asdfasdf asdfasdff asdfasdf ”</h3>
@@ -83,7 +127,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <div style="margin-bottom:150px;"></div>
 
@@ -106,53 +150,6 @@
 					<?php echo $content ?>
 				</div>
 			</div>
-			<form role="form">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Nome">
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="form-group">
-							<input type="email" class="form-control" placeholder="E-mail">
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Telefone">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Assunto">
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="form-group">
-							<select class="form-control">
-								<option selected disabled>Como nos conheceu?</option>
-								<option>Google</option>
-								<option>Facebook</option>
-								<option>Amigos</option>
-								<option>Outro</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-sm-12">
-						<div class="form-group">
-							<textarea class="form-control" rows="10" placeholder="Digíte sua mensagem aqui."></textarea>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3 col-sm-push-9">
-						<button type="submit" class="btn btn-danger btn-block text-uppercase">Enviar</button>
-					</div>
-				</div>
-			</form>
 		</div>
 	</div>
 </section>
